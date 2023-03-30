@@ -1,19 +1,28 @@
-const clockTitle = document.querySelector(".js-clock");
-
-function dDayClock() {
-  const cmasday = new Date("2023-12-25");
-  const now = new Date();
-  const dDay = cmasday - now;
-
-  const day = String(Math.floor(dDay / (1000 * 60 * 60 * 24)));
-  const hour = String(Math.floor((dDay / (1000 * 60 * 60)) % 24));
-  const minute = String(Math.floor((dDay / (1000 * 60)) % 60));
-  const second = String(Math.floor((dDay / 1000) % 60));
-
-  clockTitle.innerText = `${day.padStart(2, "0")}d ${hour.padStart(
-    2,
-    "0"
-  )}h ${minute.padStart(2, "0")}m ${second.padStart(2, "0")}s`;
+const colors = [
+  "#ef5777",
+  "#575fcf",
+  "#4bcffa",
+  "#34e7e4",
+  "#0be881",
+  "#f53b57",
+  "#3c40c6",
+  "#0fbcf9",
+  "#00d8d6",
+  "#05c46b",
+  "#ffc048",
+  "#ffdd59",
+  "#ff5e57",
+  "#d2dae2",
+  "#485460",
+  "#ffa801",
+  "#ffd32a",
+  "#ff3f34",
+];
+const button = document.querySelector("button");
+function gradient() {
+  const ranNum1 = colors[Math.floor(Math.random() * colors.length)];
+  const ranNum2 = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundImage = `linear-gradient(to left, ${ranNum1}, ${ranNum2})`;
 }
-dDayClock();
-setInterval(dDayClock, 1000);
+gradient();
+button.addEventListener("click", gradient);
