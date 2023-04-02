@@ -5,9 +5,40 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <button>Give me color</button>
-    <script src="script.js"></script>
+    <div id="MyClockDisplay" class="clock boxlayout"></div>
+    <div class="boxlayout">
+      <form class="login-form">
+        <input
+          type="text"
+          id="login-input"
+          placeholder="What's your name?"
+          required
+        />
+        <h1></h1>
+      </form>
+      <button id="login-change">change!</button>
+    </div>
+    <div class="boxlayout">
+      <form class="todolist-form">
+        <input
+          type="text"
+          id="todolist-input"
+          placeholder="Make Your Own To Do List!"
+          required
+        />
+        <button id="todolist-button">To DO!</button>
+      </form>
+      <ul class="todolist-list"></ul>
+    </div>
+    <div class="boxlayout">
+      <button id="background-button" type="button">Give me color</button>
+      <div id="weather"><span></span><span></span></div>
+    </div>
+    <script src="clock.js"></script>
+    <script src="login.js"></script>
+    <script src="bacground_color.js"></script>
+    <script src="todolist.js"></script>
+    <script src="weather.js"></script>
   </body>
 </html>

@@ -18,11 +18,12 @@ const colors = [
   "#ffd32a",
   "#ff3f34",
 ];
-const button = document.querySelector("button");
-function gradient() {
+const backgroundButton = document.querySelector("#background-button");
+
+function gradient(e) {
   const ranNum1 = colors[Math.floor(Math.random() * colors.length)];
   const ranNum2 = colors[Math.floor(Math.random() * colors.length)];
   document.body.style.backgroundImage = `linear-gradient(to left, ${ranNum1}, ${ranNum2})`;
 }
 gradient();
-button.addEventListener("click", gradient);
+backgroundButton.addEventListener("click", gradient);
